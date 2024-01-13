@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendations</title>
+  </head>
+
+<body>
+    <div>
+        <img src="assets/europe-map-vector.jpg" alt="Map of Europe" usemap="#europeMap">
+        <map name="europeMap">
+            <!-- poly coords are relative to img pixels, so if it changes size these will need to be changed. href/function change to open appropriate page -->
+            <area shape="poly" coords="316,573,413,639,372,711,395,778,306,813,215,777,240,720,184,633" href="" onclick="myFunction()">
+            <area shape="poly" coords="215,777,307,813,178,954,95,964,65,918,114,797,70,787,70,749" href="" onclick="myFunction2()">
+        </map>
+    </div>
+</body>
+
+<script>
+    function myFunction() {
+      alert("You clicked France!");
+    }
+    function myFunction2() {
+      alert("You clicked Spain!");
+    }
+    </script>
