@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Hank Scorpio",
+        "email": "hank@globex.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Aaron A. Aaronson",
+        "email": "aaa@hotmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "",
+        "email": "",
+        "password": ""
+    }
+]
