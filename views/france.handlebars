@@ -3,7 +3,6 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>France</title>
-    <!-- Include any necessary stylesheets or scripts here -->
   </head>
   <body>
     <!-- Navbar -->
@@ -18,28 +17,36 @@
 
     <!-- Main Body -->
     <div id='main-content'>
-      <!-- Section for France -->
       <section class='country-section'>
         <h2>France</h2>
         <ul>
           <li>
             <span>Paris</span>
             <p>Comment section for Paris</p>
+            <form method='post' action='/france/comment'>
+              <input type='text' id='parisComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-          <!-- Repeat similar structure for other cities in France -->
-                    <li>
+          <li>
             <span>Bordeaux</span>
             <p>Comment section for Bordeaux</p>
+            <form method='post' action='/france/comment'>
+              <input type='text' id='bordeauxComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-                    <li>
+          <li>
             <span>Lille</span>
             <p>Comment section for Lille</p>
+            <form method='post' action='/france/comment'>
+              <input type='text' id='lilleComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
         </ul>
       </section>
     </div>
-
-
 
   </body>
 </html>

@@ -3,7 +3,6 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Spain</title>
-    <!-- Include any necessary stylesheets or scripts here -->
   </head>
   <body>
     <!-- Navbar -->
@@ -18,27 +17,36 @@
 
     <!-- Main Body -->
     <div id='main-content'>
-      <!-- Section for Spain -->
       <section class='country-section'>
         <h2>Spain</h2>
         <ul>
           <li>
             <span>Barcelona</span>
             <p>Comment section for Barcelona</p>
+            <form method='post' action='/spain/comment'>
+              <input type='text' id='barcelonaComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-          <!-- Repeat similar structure for other cities in Spain -->
-                    <li>
+          <li>
             <span>Madrid</span>
             <p>Comment section for Madrid</p>
+            <form method='post' action='/spain/comment'>
+              <input type='text' id='madridComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-                    <li>
+          <li>
             <span>Valencia</span>
             <p>Comment section for Valencia</p>
+            <form method='post' action='/spain/comment'>
+              <input type='text' id='valenciaComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
         </ul>
       </section>
     </div>
-
 
   </body>
 </html>

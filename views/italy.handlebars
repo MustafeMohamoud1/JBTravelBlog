@@ -3,7 +3,6 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Italy</title>
-    <!-- Include any necessary stylesheets or scripts here -->
   </head>
   <body>
     <!-- Navbar -->
@@ -18,27 +17,36 @@
 
     <!-- Main Body -->
     <div id='main-content'>
-      <!-- Section for Italy -->
       <section class='country-section'>
         <h2>Italy</h2>
         <ul>
           <li>
             <span>Rome</span>
             <p>Comment section for Rome</p>
+            <form method='post' action='/italy/comment'>
+              <input type='text' id='romeComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-          <!-- Repeat similar structure for other cities in Italy -->
-                    <li>
+          <li>
             <span>Florence</span>
             <p>Comment section for Florence</p>
+            <form method='post' action='/italy/comment'>
+              <input type='text' id='florenceComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
-                    <li>
+          <li>
             <span>Milan</span>
             <p>Comment section for Milan</p>
+            <form method='post' action='/italy/comment'>
+              <input type='text' id='milanComment' name='comment' required />
+              <button type='submit'>Submit Comment</button>
+            </form>
           </li>
         </ul>
       </section>
     </div>
- 
 
   </body>
 </html>
