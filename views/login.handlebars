@@ -1,48 +1,25 @@
-{{!-- <section class="post-card">
-    <div class="post-header">
-        <h2>Login</h2>
-    </div>
-    <form class="login-form post-description-style">
-        <div class="form-flex">
-            <div class="login-fill">
-                <label class="login-fill" for="email-login">Email: </label>
-                <input class="form-input" type="text" id="email-login">
+<div class="row p-10">
+    <div class="max-w-sm w-full m-auto bg-indigo-300 rounded p-6">  
+        <form  class="form login-form">
+            <div>
+                <h1 class="mb-8 text-3xl text-center">Log in to Travel Plans</h1>
+                <label class="block mb-2 text-indigo-900" for="username">Username</label>
+                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="text" name="username">
             </div>
-            <div class="login-fill">
-                <label class="login-fill" for="password-login">Password: </label>
-                <input class="form-input" type="password" id="password-login">
+            <div>
+                <label class="block mb-2 text-indigo-900" for="password">Password</label>
+                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="password" name="password">
             </div>
-            <div class="login-fill">
-                <button class="btn-style" type="submit">Login</button>
-            </div>
-        </div>
-    </form>
-    <a href="/signup">Sign up instead</a>
-</section>
-
-<script src="./js/login.js"></script> --}}
-
-<div class="max-w-xs w-full m-auto bg-indigo-300 rounded p-5">  
-    <form>
-        <div>
-            <h1 class="mb-8 text-3xl text-center">Log in to Travel Plans</h1>
-            <label class="block mb-2 text-indigo-900" for="username">Username</label>
-            <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="text" name="username">
-        </div>
-        <div>
-            <label class="block mb-2 text-indigo-900" for="password">Password</label>
-            <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="password" name="password">
-        </div>
-        <div>          
-            <input class="w-full bg-gray-700 hover:bg-indigo-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit">
-        </div>     
+            <div>          
+                <input class="w-full bg-gray-700 hover:bg-indigo-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit">
+            </div>     
         </form> 
     
-    <!-- header -->
-    <!-- form -->
-    <footer>
-        <a class="text-indigo-700 hover:text-gray-700 text-sm float-left" href="#">Forgot Password?</a>
-        <a class="text-indigo-700 hover:text-gray-700 text-sm float-right" href="#">Create Account</a>
-        </footer> 
+        <footer>
+            <a class="text-indigo-700 hover:text-gray-700 text-sm float-right" href="/signup">Create Account</a>
+            </footer> 
+    </div>
 </div>
 
+
+<script src="./js/login.js"></script>
