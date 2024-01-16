@@ -1,27 +1,25 @@
-const loginFormHandler = async (event) => {
+const login = async (event) => {
     event.preventDefault();
 
-    // Uses username and password from login page
-    const userName = document.querySelector('#login-username').value.trim();
-    const password = document.querySelector('#login-password').value.trim();
+    const name = document.querySelector("#name-login").value.trim();
+    const password = document.querySelector("#password-login").value.trim();
 
-    if (email && password) {
-
-        const response = await fetch('/api/users/login', {
-            method: 'POST',
-            body: JSON.stringify({ email, password }),
-            headers: { 'Content-Type': 'application/json' },
+    if (name && password) {
+        const response = await fetch("/api/users/login", {
+            method: "POST",
+            body: JSON.stringify({ name, password }),
+            headers: { "Content-Type": "application/json" },
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
+            document.location.replace("/dashboard");
         } else {
-            alert(response.statusText);
+            alert(name +" could not log in");
         }
     }
 };
 
-const signupFormHandler = async (event) => {
+const signUp = async (event) => {
     event.preventDefault();
 
     const username = document.querySelector('#signup-username').value.trim();
@@ -42,10 +40,6 @@ const signupFormHandler = async (event) => {
     }
 };
 
-document
-    .querySelector('.login-form')
-    .addEventListener('submit',loginFormHandler);
+document.querySelector(".login-form").addEventListener("submit", login);
 
-document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+document.querySelector('.signup-form').addEventListener('submit', signUp);
