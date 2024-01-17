@@ -1,17 +1,17 @@
 const signup = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector("#username").value.trim();
+    const username = document.querySelector("#username").value.trim();
     const password = document.querySelector("#password").value.trim();
     const confirmPassword = document.querySelector("#confirm-password").value.trim();
 
     if(password !== confirmPassword){
         alert("password does not match");
     } else {
-        if (name && password) {
+        if (username && password) {
             const response = await fetch("/api/users", {
                 method: "POST",
-                body: JSON.stringify({ name, password }),
+                body: JSON.stringify({ username, password }),
                 headers: { "Content-Type": "application/json" },
             });
             
