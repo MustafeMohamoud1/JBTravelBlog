@@ -1,8 +1,8 @@
 const login = async (event) => {
     event.preventDefault();
 
-    const name = document.querySelector("#name-login").value.trim();
-    const password = document.querySelector("#password-login").value.trim();
+    const name = document.querySelector("#username").value.trim();
+    const password = document.querySelector("#password").value.trim();
 
     if (name && password) {
         const response = await fetch("/api/users/login", {
@@ -12,7 +12,7 @@ const login = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace("/dashboard");
+            document.location.replace("/");
         } else {
             alert(name +" could not log in");
         }
