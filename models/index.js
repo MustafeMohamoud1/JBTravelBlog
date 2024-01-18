@@ -1,8 +1,8 @@
 const User = require('./User');
-const Recommendations = require('./Recommendation');
+const Recommendation = require('./Recommendation');
 
-Recommendations.belongsTo(User, {
+Recommendation.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Recommendations };
+module.exports = { User, Recommendation };

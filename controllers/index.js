@@ -11,6 +11,4 @@ router.use('/', loginRoutes);
 router.use('/', signupRoutes);
 router.use('/api', apiRoutes);
 
-console.log('Starting');
-
 module.exports = router;
