@@ -37,6 +37,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRAVEL PLANS</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+   
 </head>
 <body >
   <nav class="bg-gray-600">
@@ -63,6 +64,7 @@
           <div class="relative ml-3">
               <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                  <a href="/api/recommendation" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Post Reccommendation</a>
                   <a id="logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">LOGOUT</a>
                 </div>
             </div>     
@@ -87,8 +89,8 @@
     </div>
   </main>    
 </body>
-
+{{#if loggedIn}} 
 <script src="/js/logout.js"></script>
-
+{{/if}}
 </html>
 
