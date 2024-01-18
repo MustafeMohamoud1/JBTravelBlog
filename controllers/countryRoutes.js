@@ -1,8 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const { Recommendation } = require('/models/Recommendation');
+const router = require('express').Router();
+const { Recommendation } = require('../models');
 
-router.get('/countries/france', async (req, res) => {
+router.get('/france', async (req, res) => {
   try {
       const franceRecommendations = await Recommendation.findAll({
           where: { country: 'France' },
@@ -14,7 +13,7 @@ router.get('/countries/france', async (req, res) => {
   }
 });
 
-router.get('/countries/italy', async (req, res) => {
+router.get('/italy', async (req, res) => {
   try {
       const italyRecommendations = await Recommendation.findAll({
           where: { country: 'Italy' },
@@ -26,7 +25,7 @@ router.get('/countries/italy', async (req, res) => {
   }
 });
 
-router.get('/countries/spain', async (req, res) => {
+router.get('/spain', async (req, res) => {
   try {
       const spainRecommendations = await Recommendation.findAll({
           where: { country: 'Spain' },
