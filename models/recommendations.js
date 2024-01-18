@@ -5,16 +5,21 @@ class Recommendations extends Model {}
 
 Recommendations.init(
   {
+    date_created: {
+        type: DataTypes.DATE,
+        allowNull: false,
+        defaultValue: DataTypes.NOW,
+    },    
+    attractions:{
+        type:DataTypes.STRING,
+        allowNull: false,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
-    },
-    country: {
-      type: DataTypes.STRING,
-      allowNull: false,
     },
     city: {
         type:DataTypes.STRING,
