@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 //france get request to render page and post requests to rerender with new comments
-router.get('/views/france.handlebars', (req, res) => {
+router.get('/france', (req, res) => {
     res.render('France'); // Render France.handlebars
 });
 
 //italy get request to render page and post requests to rerender with new comments
-router.get('/views/italy.handlebars', (req, res) => {
+router.get('/italy', (req, res) => {
     res.render('Italy'); // Render Italy.handlebars 
 });
 
 //spain get request to render page and post requests to rerender with new comments
-router.get('/views/spain.handlebars', (req, res) => {
+router.get('/spain', (req, res) => {
     res.render('Spain'); // Render Spain.handlebars 
 });
 
