@@ -19,37 +19,14 @@
     <div id='main-content'>
       <section class='country-section'>
         <h2>France</h2>
-        {{! <ul>
-          <li>
-            <span>Paris</span>
-            <p>Comment section for Paris</p>
-            <form method='post' action='/france/comment'>
-              <input type='text' id='parisComment' name='comment' required />
-              <button type='submit'>Submit Comment</button>
-            </form>
-          </li>
-          <li>
-            <span>Bordeaux</span>
-            <p>Comment section for Bordeaux</p>
-            <form method='post' action='/france/comment'>
-              <input type='text' id='bordeauxComment' name='comment' required />
-              <button type='submit'>Submit Comment</button>
-            </form>
-          </li>
-          <li>
-            <span>Lille</span>
-            <p>Comment section for Lille</p>
-            <form method='post' action='/france/comment'>
-              <input type='text' id='lilleComment' name='comment' required />
-              <button type='submit'>Submit Comment</button>
-            </form>
-          </li>
-        </ul> }}
-
+        <div>
+        {{#each recommendations}}
+          <p>{{this.country}} - {{this.city}} - {{this.description}}</p>
+        {{/each}}
         <!-- Add recommended locations -->
         <!-- Add a button to allow user to add -->
       </section>
-
+     </div>
     </div>
 
   </body>
