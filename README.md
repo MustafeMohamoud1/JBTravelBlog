@@ -12,7 +12,7 @@
 * It's done when the `/` homepage route includes responsive navigation menu with links to:
 Login page ,Travel planner and section Browse destinations by country.
 
-* It is done when the `/login` route renders a login form, allowing the user to log in, and then redirects to the login view. 
+* It is done when the `/login` route renders a login form, allowing the user to log in, and then redirects to the login view. (where is the log in view requirements)
 
 * It's done when the `/spain ` route renders travel recommendations from the database and displays recommended (Destinations/CITY  , attractions , Restaurants and hotels)
 

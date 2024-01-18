@@ -1,0 +1,34 @@
+<div class="row p-10">
+   <div class="max-w-xl w-full m-auto bg-indigo-300 rounded p-6">  
+        <form class="form recommendation-form">
+            <div>
+                <h1 class="mb-8 text-3xl text-center">Recommendation</h1>
+                <label class="block mb-2 text-indigo-900" for="username">Country</label>
+                <select class="w-full" id ="country">
+                    <option value="" disabled selected>--Select a Country--</option>
+                    <option value="1">France</option>
+                    <option value="2">Italy</option>
+                    <option value="3">Spain</option>
+                </select>
+            </div>
+            <div>
+                <label class="block mb-2 text-indigo-900" for="city">City</label>
+                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="text" id="city">
+            </div>
+            <div>
+                <label class="block mb-2 text-indigo-900" for="place">Place</label>
+                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300"  id="place">
+            </div>
+
+            <div>
+                <label class="block mb-2 text-indigo-900" for="description">Description</label>
+                <textarea class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" id="description"></textarea>
+            </div>
+            <div>          
+                <input class="w-full bg-gray-700 hover:bg-indigo-700 text-white font-bold py-2 px-4 mb-6 rounded" type="submit">
+            </div> 
+        </form>
+    </div>
+</div>
+
+     <script src="../js/postReccommendation.js"></script>

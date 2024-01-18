@@ -1,21 +1,34 @@
-// const router = require('express').Router();
-// const { Comment } = require('../models');
+const router = require('express').Router();
+const { Recommendation } = require('../../models');
 
-// router.post('/', async (req, res) => {
-//     console.log('create reccommendation')
-//     try {
-//       const newReccommendation = await Reccommendation.create({
-//         ...req.body,
-//         user_id: req.session.user_id,
-//       });
-//       console.log(newReccommendation)
-//       res.status(200).json(newReccommendation);
-//     } catch (err) {
-//       res.status(400).json(err);
-//     }
-//   });
+// router.get('/', async (req, res) => {
+//   if (req.session.loggedIn) {
+//     res.redirect('/recommendation');     
+// } else {
+//     res.render('login');
+// }
+// });
+router.get('/', async (req, res) => {
+  const post = { name: '', content: '' }
+  res.render('recommendation', { Recommendation, newRecommendation: true, loggedIn: req.session.loggedIn });
+});
 
-//   //Update the reccommendation
+
+router.post('/', async (req, res) => {
+    console.log('create recommendation')
+    try {
+      const newRecommendation = await Recommendation.create({
+        ...req.body,
+        user_id: req.session.user_id,
+      });
+      console.log(newRecommendation)
+      res.status(200).json(newRecommendation);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
+
+  //Update the reccommendation
 //   router.put('/post/:id', async (req, res) => {
 //     try {
 //         const postData = await Post.update(
@@ -35,8 +48,8 @@
 //     }
 // });
 
-//   //delete a comment
-// router.delete('/:id', async (req, res) => {
+  //delete a comment
+// router.delete('/:id', withAuth, async (req, res) => {
 //     try {
 //       const postReccommendation = await Reccommendation.destroy({
 //         where: {
@@ -57,4 +70,4 @@
 //     }
 //   });
   
-//   module.exports = router;
+  module.exports = router;
