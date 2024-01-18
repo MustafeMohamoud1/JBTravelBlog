@@ -25,6 +25,10 @@ Recommendations.init(
         type:DataTypes.STRING,
         allowNull: false,
     },
+    country: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
