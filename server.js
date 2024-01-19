@@ -30,6 +30,9 @@ const sess = {
 //point express to the session object
 app.use(session(sess));
 
+//use static files from public folder
+app.use(express.static('public'));
+
 //set up handlebars
 const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
