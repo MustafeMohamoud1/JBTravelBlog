@@ -12,6 +12,8 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
 
+const dadJokes = require('generate-dad-jokes');
+
 const app = express();
 //setup port for local or heroku operation
 const PORT = process.env.PORT || 3001;
@@ -49,3 +51,5 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+
+console.log(dadJokes);
