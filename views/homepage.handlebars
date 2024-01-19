@@ -1,3 +1,36 @@
-<div>
-    this is home page
-</div>
+ <div class="body row">
+
+        <div class="mt-6 flex-row align-center mx-auto bg-primary w-3/4">
+            <div class= "intro-text mb-8 p-4 border border-gray-400 rounded-md bg-white">
+              <h3 class="text-lg font-semibold mb-2">Welcome to JSON BOURNE'S Travel Hub!</h3>
+              <p class="text-gray-700 text-base">
+                    The go-to place to share your places to go. Found any hidden gems in Genoa? A peaceful park in Paris?
+                    Now you can share your personal recommendations with other users, and save them to help plan 
+                    your trip.
+              </p>
+              <p class="text-gray-700 text-base">
+                    Have a look around, but to access full content sign-up or log in to start posting and save posts
+                    to your account. What're you waiting for?!
+              </p>
+              
+            </div>
+              
+        </div>
+
+        <div>
+            <div class="my-6 flex-row align-center mx-auto bg-primary">
+                <p class="text-center">Where would you like to go? Click on a country to view</p>
+            </div>
+            <div class=>
+                <img id="europe-map" src="assets/europe-map-vector.jpg" alt="Map of Europe" usemap="#europeMap" width="600" height="600" class="rounded-lg mx-auto">
+                <map name="europeMap">
+                    <!-- poly coords are relative to img pixels, so if it changes size these will need to be changed. href/function change to open appropriate page -->
+                    <area id="france-map" shape="poly" coords="316,573,413,639,372,711,395,778,306,813,215,777,240,720,184,633" href="" onclick="myFunction()">
+                    <area id="spain-map" shape="poly" coords="215,777,307,813,178,954,95,964,65,918,114,797,70,787,70,749" href="" onclick="myFunction2()">
+                    <area id="italy-map" shape="poly" coords="215,777,307,813,178,954,95,964,65,918,114,797,70,787,70,749" href="" onclick="myFunction3()">
+                </map>
+            </div>
+        </div>
+    </div>
+
+<script src="./js/mapClick.js"></script>
