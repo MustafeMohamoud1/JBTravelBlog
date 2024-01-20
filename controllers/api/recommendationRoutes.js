@@ -3,9 +3,58 @@ const { Recommendation } = require('../../models');
 
 
 router.get('/', async (req, res) => {
-  res.render('recommendation', { loggedIn: req.session.loggedIn });
+         res.render('recommendation', { loggedIn: req.session.loggedIn });
+    });
+
+    
+  // working section
+router.get('/recomJson', async (req, res) => {
+    try {
+        const readerData = await Recommendation.findAll({
+        
+    });
+    res.status(200).json(readerData);
+    
+  } catch (err) {
+    res.status(500).json(err);
+  }  
+});
+//json file to display selected country in the database (working code)
+router.get('/recomJson/:country', async (req, res) => {
+  try {
+    const recommendations = await Recommendation.findAll({
+            where: {
+        country: req.params.country
+      }
+    });
+
+    const recomLoop = recommendations.map((recomIndiv) => recomIndiv.get({ plain: true }));
+
+// need to fix this , code working reference to Italy is a little redundant 
+    res.render('Italy', { recomLoop});
+  //res.status(200).json(recommendations);
+  
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
+// router.get('/recomJson/Italy', async (req, res) => {
+//   try {
+//     const recommendations = await Recommendation.findAll({
+//             where: {
+//         country: 'Italy'
+//       }
+//     });
+//     const dishes = recommendations.map((dish) => dish.get({ plain: true }));
+
+//     res.render('italy', { dishes });
+//   //res.status(200).json(recommendations);
+  
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 router.post('/', async (req, res) => {
     console.log('create recommendation');
@@ -41,25 +90,26 @@ router.post('/', async (req, res) => {
 // });
 
   //delete a comment
-// router.delete('/:id', withAuth, async (req, res) => {
-//     try {
-//       const postReccommendation = await Reccommendation.destroy({
-//         where: {
-//           id: req.params.id,
-//           user_id: req.session.user_id,
-//         },
-//       });
+  //router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
+    try {
+      const postReccommendation = await Recommendation.destroy({
+        where: {
+          id: req.params.id,
+          user_id: req.session.user_id,
+        },
+      });
   
-//       if (reccommendationData) {
-//         res.status(200).json(reccommendationData);
-//       } else {
-//         res.status(404).json({ message: "No Reccommendation found with this id!" });
-//         return;
-//       }
+      if (postReccommendation) {
+        res.status(200).json(postReccommendation);
+      } else {
+        res.status(404).json({ message: "No Reccommendation found with this id!" });
+        return;
+      }
   
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
   
   module.exports = router;
