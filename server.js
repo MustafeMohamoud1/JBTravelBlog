@@ -6,7 +6,7 @@ const routes = require('./controllers');
 //include handlebars for templating
 const exphbs = require('express-handlebars');
 //const helpers = require('./utils/helpers');
-//specify db connection for orm
+//specify db connection for ORM
 const sequelize = require('./config/connection');
 //init session state
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -47,7 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-//sync orm to the datasource
+//sync ORM to the datasource
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
