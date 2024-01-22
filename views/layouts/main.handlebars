@@ -1,35 +1,3 @@
-{{!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Travel Recommendations</title>
-  </head>
-
-<body>
-    <div>
-        <img src="assets/europe-map-vector.jpg" alt="Map of Europe" usemap="#europeMap">
-        <map name="europeMap">
-            <!-- poly coords are relative to img pixels, so if it changes size these will need to be changed. href/function change to open appropriate page -->
-            <area shape="poly" coords="316,573,413,639,372,711,395,778,306,813,215,777,240,720,184,633" href="" onclick="myFunction()">
-            <area shape="poly" coords="215,777,307,813,178,954,95,964,65,918,114,797,70,787,70,749" href="" onclick="myFunction2()">
-            <area shape="poly" coords="215,777,307,813,178,954,95,964,65,918,114,797,70,787,70,749" href="" onclick="myFunction3()">
-        </map>
-    </div>
-</body>
-
-<script>
-    function myFunction() {
-      alert("You clicked France!");
-    }
-    function myFunction2() {
-      alert("You clicked Spain!");
-    }
-        function myFunction3() {
-      alert("You clicked Italy!");
-    }
-    </script> --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,7 +8,7 @@
    
 </head>
 <body >
-  <nav class="bg-gray-600">
+  <nav class="bg-blue-600">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
 
@@ -51,8 +19,9 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="/" class="bg-gray-900 text-white rounded-md px-10 py-2 text-lg font-large" aria-current="page">  YOUR TRAVEL PLANS</a>
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">COUNTRY</a>
+              <a href="api/recommendation/recomJson/homepage" class="bg-gray-900 text-white rounded-md px-5 py-2 rounded-lg font-large" aria-current="page">  TRAVEL RECOMMENDATIONS</a>
+              
+      {{#if loggedIn}} 
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">YOUR PLANS</a>
               
             </div>
@@ -60,7 +29,17 @@
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-          {{#if loggedIn}} 
+       
+               <select class="bg-gray-900 text-white rounded-md px-10 py-2 rounded-lg font-large"   id="countryDropdown" onchange="handleSelect()">
+
+ <option value="" disabled selected>Select a Country</option>
+
+
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Spain">Spain</option>
+
+</select>
           <div class="relative ml-3">
               <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -89,7 +68,24 @@
     </div>
   </main>    
 </body>
+ <!-- dropdown meny selection -->
+
+ <script>
+ function handleSelect() {
+
+  const dropdown = document.getElementById("countryDropdown");
+  const value = dropdown.value;
+
+  newURL=`/api/recommendation/recomJson/${value}`;
+  
+  document.location.href = newURL
+
+}
+  
+</script>
+
 {{#if loggedIn}} 
+
 <script src="/js/logout.js"></script>
 {{/if}}
 </html>

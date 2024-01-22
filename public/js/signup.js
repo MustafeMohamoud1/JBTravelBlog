@@ -16,6 +16,7 @@ const signup = async (event) => {
             });
             
             if (response.ok) {
+           
                 document.location.replace("/");
             } else {
                 alert("Error, please check your password");

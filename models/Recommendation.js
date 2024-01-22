@@ -11,17 +11,30 @@ Recommendation.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    country: {
+    // no idea why there is an error if i don't add  vsalidate and set allowNull to true 
+   country: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      validate: {
+        notEmpty: true,
+        },
+      
     },
+
     city: {
       type:DataTypes.STRING,
-      allowNull: false,
-    },
+      allowNull: true,
+      validate: {
+        notEmpty: true,
+        },
+           },
+
     place: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
+      validate: {
+        notEmpty: true,
+        },
     },
     description: {
       type: DataTypes.STRING,

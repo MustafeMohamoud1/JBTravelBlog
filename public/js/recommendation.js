@@ -1,15 +1,17 @@
-const postRecommendation = async (event) => {
+    const postRecommendation = async (event) => {
     event.preventDefault();
+
 
     const country = document.querySelector("#country").value;
     const city = document.querySelector("#city").value.trim();
     const place = document.querySelector("#place").value.trim();
     const description = document.querySelector('#description').value.trim();
-
-     if(country !== selectedCountry){
+ 
+ 
+     if(!country){
          alert("Please select valid country");
      } else {
-        if (country && city && place && description) {
+        if (city && place && description) {
             const response = await fetch('recommendation', {
                 method: "POST",
                 body: JSON.stringify({ country, city, place, description  }),
@@ -18,6 +20,8 @@ const postRecommendation = async (event) => {
             
             if (response.ok) {
                 document.location.replace("/");
+              
+                
             } else {
                 alert("Error creating recommendations");
             }
