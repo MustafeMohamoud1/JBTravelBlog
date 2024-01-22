@@ -29,6 +29,7 @@
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
        
+          {{#if loggedIn}} 
                <select class="bg-gray-900 text-white rounded-md px-10 py-2 rounded-lg font-large"   id="countryDropdown" onchange="handleSelect()">
 
  <option value="" disabled selected>Select a Country</option>
@@ -46,7 +47,7 @@
                   <a id="logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">LOGOUT</a>
                 </div>
             </div>     
-        {{!-- {{else}} --}}
+     {{else}}
           <!-- Profile dropdown -->
             <div class="relative ml-3">
               <div class="flex space-x-4">
@@ -56,19 +57,19 @@
                   
                 </div>
             </div>
-            {{!-- {{/if}} --}}
+          {{/if}}
         </div>
       </div>
     </div>
     <!-- Mobile menu, show/hide based on menu state. -->
-    <div class="sm:hidden" id="mobile-menu">
+<div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-large" aria-current="page">JBTRAVEL BLOG</a>
             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">COUNTRY</a>
             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">YOUR PLANS</a>
         </div>
-    </div>
+    </div> 
   </nav>
   <main>
     <div class="body row">
