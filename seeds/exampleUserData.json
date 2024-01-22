@@ -1,4 +1,10 @@
 [
+    
+    {
+        "name": "admin",
+        "email": "admin@example.com",
+        "password": "admin#2024"
+    },
     {
        
     }

@@ -37,7 +37,7 @@ Recommendation.init(
         },
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },     
     date_created: {
       type: DataTypes.DATE,

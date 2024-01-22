@@ -6,6 +6,7 @@ router.get('/', async (req, res) => {
          res.render('recommendation', { loggedIn: req.session.loggedIn });
     });
 
+
     router.post('/', async (req, res) => {
       console.log('create recommendation');
       console.log(req.body);

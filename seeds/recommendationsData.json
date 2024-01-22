@@ -1,6 +1,111 @@
 [
     {
-       
+        "country": "1",
+        "city": "PaLa Teste-de-Buch",
+        "place": "Dune du Pilat",
+        "description": "Soaring more than 100m (328ft) above sea level, the otherworldly Dune du Pilat is Europe’s tallest sand dune. Sheltered by the Arguin sandbank, its waters are much gentler than further up the Atlantic coast on the western side of Cap Ferret. It’s ringed with campsites, giving you not only one of the loveliest views but also utterly mesmerizing sunsets. When you’re not running up the mountain of sand, you’ll be transfixed by the antics of the paragliders who rarely leave this place.",
+        "user_id": "1"
+    },
+    {
+        "country": "1",
+        "city": "Paris",
+        "place": "Disney World ",
+        "description": "It is every child’s dream to visit Disney World and see their favorite Disney characters while also enjoying the entertainment of a lifetime! Furthermore, places like Disney World make adults reminisce about their childhood and feel like a kid again. The Walt Disney World Resort is a 110-kilometer-squared entertainment complex in Orlando featuring numerous things to see, discover, and enjoy. ",
+        "user_id": "1"
+    },
+    {
+        "country": "1",
+        "city": "peninsula",
+        "place": "Saint-Jean-Cap-Ferrat",
+        "description": "exquisite villas hidden by lush vegetation, breathtaking beaches with clear waters for snorkeling, hiking trails, and a yacht-filled harbor.",
+        "user_id": "1"
+    },
+    {
+        "country": "1",
+        "city": "Paris",
+        "place": "Eiffel Tower",
+        "description": "Upon the first glimpse, you'll be impressed by the tower's delicate airiness despite its monumental size. Next, the panoramas at each of the three levels will take your breath away.",
+        "user_id": "1"
+    },
+    {
+        "country": "1",
+        "city": "Château de Versailles",
+        "place": "Hall of Mirrors",
+        "description": " This dazzling gallery sparkles with sunlight that enters through the windows and is reflected off hundreds of ornamental mirrors, while dozens of glittering chandeliers and gilded details make the overall impression even more marvelous.",
+        "user_id": "1"
+    },
+    {
+        "country": "2",
+        "city": "Venice",
+        "place": "Rialto Bridge",
+        "description": " Unique is an overused word, but in the case of Venice, there’s no better description. This really is a dreamscape of intricately carved palazzos, gilded churches and world-class museums, all floating on water and crisscrossed by quiet canals.",
+        "user_id": "1"
+    },
+    {
+        "country": "2",
+        "city": "Milan",
+        "place": "Milan Duomo",
+        "description": "Duomo to the locals, is one of the world's largest churches and probably the best example anywhere of the flamboyant Gothic style.",
+        "user_id": "1"
+    },  
+    {
+        "country": "2",
+        "city": "Valle d’Itria",
+        "place": "Alberobello",
+        "description": "Best for picture-perfect villages, They look like hobbit houses – small conical-roofed cottages, often stitched together to form a bigger home but always fairytale pretty, whatever the size. Puglia, the heel of Italy’s boot, is famous for its trulli, but you won’t find them all over the region.",
+        "user_id": "1"
+    },
+    {
+        "country": "2",
+        "city": "Sardinia",
+        "place": "Costa Smeralda",
+        "description": "Back in 1962, flamboyant millionaire Karim Aga Khan established a consortium to buy a strip of unspoiled coastline in northeastern Sardinia.",
+        "user_id": "1"
+    },
+    {
+        "country": "2",
+        "city": "Pompeii",
+        "place": "Naples",
+        "description": "Best for stepping back in time, Travel to the top of Mount Vesuvius and look into its crater",
+        "user_id": "1"
+    },
+    {
+        "country": "3",
+        "city": "Barcelona",
+        "place": "Works of Gaudí",
+        "description": "Barcelona is one of the most famous cities in Spain and it is the unique architecture of the city that has helped it to stand out above the crowd. When visiting the city, you must make a point of searching for the architectural designs of Antoni Gaudí in Barcelona. Gaudí’s works of art are on display throughout the city showcasing the work of the renowned Catalan architect.",
+        "user_id": "1"
+    },
+
+    {
+        "country": "3",
+        "city": "Madrid",
+        "place": "the Templo de Debod",
+        "description": "The Temple of Debod was a gift offered by the Egyptian government to Spain as a token of gratitude for its assistance in restoring the Abu Simbel temples in Upper Egypt.",
+        "user_id": "1"
+    },
+
+    {
+        "country": "3",
+        "city": " Valencia",
+        "place": "Tour in Natural Thermal Springs and Girlfriend Waterfall",
+        "description": "Get out of the city and explore the nature that surrounds Valencia on a day trip to the town of Montanejos. Bathe in hot springs and discover waterfalls, these waters are warm all year round.",
+        "user_id": "1"
+    },
+    {
+        "country": "3",
+        "city": "Gaudí Park Barcelona",
+        "place": "Park Güell",
+        "description": "Park Güell is a fairytale land with greenery and interesting architectural designs. Gaudí worked on the park from 1900-1912 and it officially opened in 1926, the year of his death. Park Güell became a UNESCO world heritage site in 1984.",
+        "user_id": "1"
+    },
+    {
+        "country": "3",
+        "city": "Madrid",
+        "place": "Museo del Prado",
+        "description": "The Prado is one of the world’s most dazzling art museums.",
+        "user_id": "1"
     }
-   
+
+
 ]
