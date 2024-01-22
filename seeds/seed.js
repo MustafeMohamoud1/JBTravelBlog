@@ -5,6 +5,7 @@ const userData = require('./exampleUserData.json');
 const recommendationData = require('./recommendationsData.json');
 // const for recommendationData + location
 
+
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });
 
@@ -12,6 +13,7 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true,
     });
+    
 
     await Recommendation.bulkCreate(recommendationData, {include: {model: User}});
 
@@ -19,3 +21,7 @@ const seedDatabase = async () => {
 };
 
 seedDatabase();
+
+
+
+

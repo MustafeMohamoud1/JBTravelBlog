@@ -1,5 +1,6 @@
-const postRecommendation = async (event) => {
+    const postRecommendation = async (event) => {
     event.preventDefault();
+
 
     const country = document.querySelector("#country").value;
     const city = document.querySelector("#city").value.trim();
