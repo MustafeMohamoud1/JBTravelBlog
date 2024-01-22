@@ -7,11 +7,13 @@ const routes = require('./controllers');
 //include handlebars for templating
 const exphbs = require('express-handlebars');
 //const helpers = require('./utils/helpers');
-//specify db connection for orm
+//specify db connection for ORM
 const sequelize = require('./config/connection');
 //init session state
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const path = require('path');
+
+const dadJokes = require('generate-dad-jokes');
 
 const app = express();
 //setup port for local or heroku operation
@@ -31,6 +33,9 @@ const sess = {
 //point express to the session object
 app.use(session(sess));
 
+//use static files from public folder
+app.use(express.static('public'));
+
 //set up handlebars
 const hbs = exphbs.create();
 app.engine('handlebars', hbs.engine);
@@ -43,7 +48,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-//sync orm to the datasource
+//sync ORM to the datasource
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+<<<<<<< HEAD
+=======
+
+console.log(dadJokes);
+>>>>>>> d608bf480a467ae93893611969b11e86d071a96f

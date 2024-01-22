@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TRAVEL PLANS</title>
+    <title>Welcome to JSON BOURNE'S Travel Hub</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
    
 </head>
@@ -19,9 +19,14 @@
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+<<<<<<< HEAD
               <a href="api/recommendation/recomJson/homepage" class="bg-gray-900 text-white rounded-md px-5 py-2 rounded-lg font-large" aria-current="page">  TRAVEL RECOMMENDATIONS</a>
               
       {{#if loggedIn}} 
+=======
+              <a href="/" class="bg-gray-900 text-white rounded-md px-10 py-2 text-lg font-large" aria-current="page">JBTRAVEL BLOG</a>
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">COUNTRY</a>
+>>>>>>> d608bf480a467ae93893611969b11e86d071a96f
               <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">YOUR PLANS</a>
               
             </div>
@@ -61,12 +66,31 @@
         </div>
       </div>
     </div>
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+            <a href="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-large" aria-current="page">JBTRAVEL BLOG</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">COUNTRY</a>
+            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">YOUR PLANS</a>
+        </div>
+    </div>
   </nav>
   <main>
     <div class="body row">
       {{{body}}}
     </div>
-  </main>    
+  </main>
+  <footer>
+    <nav class="bg-gray-600">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-20 items-center justify-between">
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <h6 class="text-white w-1/2 p-4 mx-auto text-center">© 2024 JB Travel Inc.</h6>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
  <!-- dropdown meny selection -->
 

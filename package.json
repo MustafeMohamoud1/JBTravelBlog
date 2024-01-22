@@ -19,9 +19,13 @@
     "express-flash": "^0.0.2",
     "express-handlebars": "^5.2.0",
     "express-session": "^1.17.1",
+    "generate": "^0.14.0",
+    "generate-dad-jokes": "^1.0.9",
+    "jokes": "^0.0.2",
     "mysql2": "^2.2.5",
     "nodemon": "^3.0.3",
     "passport-local": "^1.0.0",
+    "random": "^4.1.0",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
