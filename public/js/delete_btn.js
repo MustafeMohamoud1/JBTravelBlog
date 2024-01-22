@@ -11,11 +11,13 @@ for (let i=0; i< deletBtn.length; i++)
         const response = await fetch(`/api/recommendation/${id}`, {
           method: 'DELETE',
         });
-     
+
       if (response.ok) {
- document.location.replace(`/api/recommendation/recomJson/Italy`);
-
-
+        await fetch(`/api/recommendation/recomJson/${request.getSession().getAttribute("country").toString()}`, {
+          method: 'GET',
+        });
+        
+        //document.location.replace(`/api/recommendation/recomJson/${request.getSession().getAttribute("country").toString()}`);
       } else {
         alert('Failed to delete recommendation');
       }
