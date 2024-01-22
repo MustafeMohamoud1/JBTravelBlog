@@ -13,20 +13,12 @@ const seedDatabase = async () => {
         individualHooks: true,
         returning: true,
     });
-    const usersRecom = await Recommendation.bulkCreate(recomData,{
-        individualHooks: true,
-        returning: true,
-    });
-  
-   
+    
 
     await Recommendation.bulkCreate(recommendationData, {include: {model: User}});
 
     process.exit(0);
 };
-
-
-
 
 seedDatabase();
 
