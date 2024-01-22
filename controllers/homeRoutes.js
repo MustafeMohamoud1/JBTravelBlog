@@ -30,7 +30,6 @@ router.get('/', async (req, res) => {
     
       
       const spainRecommendations = spainData.map((place) => place.get({ plain: true }));
-      console.log(franceRecommendations);
 
     res.render('homepage', {franceRecommendations, italyRecommendations, spainRecommendations,loggedIn: req.session.loggedIn});
 });
