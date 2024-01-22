@@ -1,6 +1,7 @@
 //require express for running as service
 const express = require('express');
 const session = require('express-session');
+
 //offload routes to controllers directory reference
 const routes = require('./controllers');
 //include handlebars for templating
@@ -51,5 +52,8 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+<<<<<<< HEAD
+=======
 
 console.log(dadJokes);
+>>>>>>> d608bf480a467ae93893611969b11e86d071a96f

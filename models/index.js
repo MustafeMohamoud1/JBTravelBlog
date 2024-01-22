@@ -1,8 +1,13 @@
+const Recommendation= require('./Recommendation');
 const User = require('./User');
-const Recommendation = require('./Recommendation');
 
 Recommendation.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-module.exports = { User, Recommendation };
+module.exports = { Recommendation,User};
+
+
+
+
+

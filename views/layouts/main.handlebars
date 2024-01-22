@@ -8,7 +8,7 @@
    
 </head>
 <body >
-  <nav class="bg-gray-600">
+  <nav class="bg-blue-600">
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-20 items-center justify-between">
 
@@ -28,7 +28,17 @@
         </div>
         <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
-          {{#if loggedIn}} 
+       
+               <select class="bg-gray-900 text-white rounded-md px-10 py-2 rounded-lg font-large"   id="countryDropdown" onchange="handleSelect()">
+
+ <option value="" disabled selected>Select a Country</option>
+
+
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Spain">Spain</option>
+
+</select>
           <div class="relative ml-3">
               <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
@@ -78,8 +88,24 @@
   </footer>
 
 </body>
+ <!-- dropdown meny selection -->
+
+ <script>
+ function handleSelect() {
+
+  const dropdown = document.getElementById("countryDropdown");
+  const value = dropdown.value;
+
+  newURL=`/api/recommendation/recomJson/${value}`;
+  
+  document.location.href = newURL
+
+}
+  
+</script>
 
 {{#if loggedIn}} 
+
 <script src="/js/logout.js"></script>
 {{/if}}
  
