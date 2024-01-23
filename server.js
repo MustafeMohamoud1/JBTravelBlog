@@ -50,7 +50,7 @@ app.use(routes);
 
 //sync ORM to the datasource
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () => console.log("===== Now listening, time for a joke... ====="));
 });
 
 console.log(dadJokes);

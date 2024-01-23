@@ -20,8 +20,6 @@
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a href="/" class="bg-gray-900 text-white rounded-md px-10 py-2 text-lg font-large" aria-current="page">JBTRAVEL BLOG</a>
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">COUNTRY</a>
-              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">YOUR PLANS</a>
               
             </div>
           </div>
@@ -39,10 +37,13 @@
           <div class="relative ml-3">
               <div class="flex space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="/api/recommendation" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Post Reccommendation</a>
+                  <a href="/api/recommendation" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Post Recommendation</a>
+                  <a href="/map" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">World Map</a>
                   <a id="logout" class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">LOGOUT</a>
                 </div>
-            </div>     
+            </div>
+            
+
      {{else}}
           <!-- Profile dropdown -->
             <div class="relative ml-3">
@@ -85,7 +86,7 @@
   </footer>
 
 </body>
- <!-- dropdown meny selection -->
+ <!-- dropdown menu selection -->
 
 <script>
   function handleSelect() {
@@ -95,6 +96,7 @@
     newURL=`/api/recommendation/recomJson/${value}`;
     document.location.href = newURL
   }
+
 </script>
 
 {{#if loggedIn}} 

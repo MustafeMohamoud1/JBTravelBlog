@@ -17,7 +17,10 @@ const seedDatabase = async () => {
 
     await Recommendation.bulkCreate(recommendationData, {include: {model: User}});
 
+    console.log("===== db now seeded =====")
+
     process.exit(0);
+    
 };
 
 seedDatabase();
