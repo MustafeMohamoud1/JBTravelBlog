@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { Recommendation } = require('../../models');
-
+const { Recommendation, User } = require('../../models');
+const sequelize = require('sequelize');
 
 router.get('/', async (req, res) => {
          res.render('recommendation', { loggedIn: req.session.loggedIn });
@@ -52,16 +52,28 @@ console.log(recomLoop)
 router.get('/recomJson/:country', async (req, res) => {
   try {
     const recommendations = await Recommendation.findAll({
-            where: {
-        country: req.params.country
-      }
+      where: {country: req.params.country}
+        ,
+        attributes: ['city', 'place', 'description', 
+        [sequelize.fn
+        (
+          "DATE_FORMAT", 
+          sequelize.col("date_created"), 
+          "%d-%m-%Y"
+        ), 'date_created'
+        ]],
+        include: [{
+          model: User,
+          attributes: ['name']
+      }]
     });
     const recomLoop = recommendations.map((recomIndiv) => recomIndiv.get({ plain: true }));
-
+    console.log(recomLoop);
     req.session.country = req.params.country;
     res.render('country', { loggedIn: req.session.loggedIn,recomLoop});
    
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
