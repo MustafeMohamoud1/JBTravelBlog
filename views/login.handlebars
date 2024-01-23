@@ -1,20 +1,43 @@
-<div class="row p-10">
-    <div class="max-w-sm w-full m-auto bg-indigo-200 rounded p-6">  
-        <form  class="form login-form">
-            <div>
-                <h1 class="mb-8 text-3xl text-center">Log in to Travel Plans</h1>
-                <label class="block mb-2 text-indigo-900" for="username">Username</label>
-                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="text" id="username">
-            </div>
-            <div>
-                <label class="block mb-2 text-indigo-900" for="password">Password</label>
-                <input class="w-full p-2 mb-6 text-indigo-700 border-b-2 border-indigo-500 outline-none focus:bg-gray-300" type="password" id="password">
-            </div>
 
+<div class="flex justify-center">
+  <div class="w-full max-w-md px-8 py-12 bg-white rounded-lg shadow">
+       <form  class="form login-form">
+            <div>
+                <h1 class="text-2xl font-semibold text-gray-700 text-center mb-6">Log in to Travel Plans </h1>
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                <input 
+          class="border rounded-md w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-indigo-500"
+          type="text" id="username" placeholder="Enter a Username">
+            </div>
+             <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          Password 
+        </label>
 
-    <button 
+        <input
+          class="border rounded-md w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-indigo-500" 
+          type="password" id="password" placeholder="Enter a Password">
+      </div>
+           
+            <button 
       class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
       type="submit">
       Submit
     </button>
+        </form>
+        <div class="text-grey-dark mt-6">
+            Don't have an account? 
+            <a class="text-indigo-700 hover:text-gray-700 no-underline  border-blue text-blue" href="../signup/">Sign up</a>
+        </div>
+    </div>
+</div>
+    
     <script src="./js/login.js"></script>
+
+    
+
+
+
+
+
+
