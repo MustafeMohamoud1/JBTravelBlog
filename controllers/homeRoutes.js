@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     // pass each of the country recommendations object bo below 
 
     const franceData = await Recommendation.findAll({
-        limit:8,
+        limit:1,
         attributes: ['city', 'place', 'description'],
         where: {country: 1}
       });
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
       const franceRecommendations = franceData.map((place) => place.get({ plain: true }));
     
       const italyData = await Recommendation.findAll({
-        limit:3,
+        limit:1,
         attributes: ['city', 'place', 'description'],
         where: {country: 2}
       });
@@ -23,7 +23,7 @@ router.get('/', async (req, res) => {
       const italyRecommendations = italyData.map((place) => place.get({ plain: true }));
     
       const spainData = await Recommendation.findAll({
-        limit:3,
+        limit:1,
         attributes: ['city', 'place','description'],
         where: {country:3}
       });
