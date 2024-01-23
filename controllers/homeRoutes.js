@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     // pass each of the contry recommendations object bo below 
 
     const franceData = await Recommendation.findAll({
-        limit:3,
+        limit:8,
         attributes: ['city', 'place', 'description'],
         where: {country: 1}
       });
@@ -30,6 +30,7 @@ router.get('/', async (req, res) => {
     
       
       const spainRecommendations = spainData.map((place) => place.get({ plain: true }));
+      console.log(franceRecommendations);
 
     res.render('homepage', {franceRecommendations, italyRecommendations, spainRecommendations,loggedIn: req.session.loggedIn});
 });

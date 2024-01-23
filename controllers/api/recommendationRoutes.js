@@ -1,24 +1,24 @@
 const router = require('express').Router();
-const { Recommendation, User } = require('../../models');
-const sequelize = require('sequelize');
+const { Recommendation } = require('../../models');
+
 
 router.get('/', async (req, res) => {
          res.render('recommendation', { loggedIn: req.session.loggedIn });
     });
 
 
-router.post('/', async (req, res) => {
-  console.log('create recommendation');
-  console.log(req.body);
-  try {
-    const newRecommendation = await Recommendation.create(req.body);
-    console.log(newRecommendation)
-    res.status(200).json(newRecommendation);
-  } catch (err) {
-    console.log(err);
-    res.status(400).json(err);
-  }
-});
+    router.post('/', async (req, res) => {
+      console.log('create recommendation');
+      console.log(req.body);
+      try {
+        const newRecommendation = await Recommendation.create(req.body);
+        console.log(newRecommendation)
+        res.status(200).json(newRecommendation);
+      } catch (err) {
+        console.log(err);
+        res.status(400).json(err);
+      }
+    });
   // working section
 // router.get('/recomJson', async (req, res) => {
 //     try {
@@ -52,28 +52,17 @@ console.log(recomLoop)
 router.get('/recomJson/:country', async (req, res) => {
   try {
     const recommendations = await Recommendation.findAll({
-      where: {country: req.params.country}
-        ,
-        attributes: ['city', 'place', 'description', 
-        [sequelize.fn
-        (
-          "DATE_FORMAT", 
-          sequelize.col("date_created"), 
-          "%d-%m-%Y"
-        ), 'date_created'
-        ]],
-        include: [{
-          model: User,
-          attributes: ['name']
-      }]
+            where: {
+        country: req.params.country
+      }
     });
     const recomLoop = recommendations.map((recomIndiv) => recomIndiv.get({ plain: true }));
-    console.log(recomLoop);
-    req.session.country = req.params.country;
-    res.render('country', { loggedIn: req.session.loggedIn,recomLoop});
-   
+
+// need to fix this , code working reference to Italy is a little redundant 
+// 
+    res.render('italy', { loggedIn: req.session.loggedIn,recomLoop});
+    
   } catch (err) {
-    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -145,15 +134,17 @@ router.delete('/:id', async (req, res) => {
       const postReccommendation = await Recommendation.destroy({
         where: {
           id: req.params.id,
-        },
+                },
       });
   
       if (postReccommendation) {
         res.status(200).json(postReccommendation);
+        
       } else {
         res.status(404).json({ message: "No Reccommendation found with this id!" });
         return;
       }
+  
     } catch (err) {
       res.status(500).json(err);
     }
