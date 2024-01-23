@@ -10,7 +10,7 @@ router.get('/map', (req, res) => {
         }
    });
 
-
+module.exports = router;
 
 // router.get('/map', (req, res) => {
 //         res.render('map', {
