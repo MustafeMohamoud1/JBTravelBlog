@@ -3,23 +3,24 @@
 
   {{#each recomLoop}}
 
-    <div class="bg-white border border-black-400 rounded-lg shadow-md overflow-hidden">
+    <div class="bg-white border border-black-400 rounded-lg shadow-md overflow-hidden text-gray-900">
 
       <div class="p-6">
 
         <h3 class="text-lg font-semibold text-black-800 mb-2 uppercase"> {{city}} </h3>
 
-        <p class="text-gray-700 mb-4">
+        <p class=" mb-4">
 
           <span class="font-bold">Place: </span> {{place}}
 
         </p>  
 
-        <p class="text-gray-600 text-sm">
+        <p class=" text-sm">
 
           {{description}}
 
         </p>
+        <p class=" text-sm"><b>Posted By: </b>{{user.name}} <b> On </b> {{date_created}}</p>
 
       </div>
 
