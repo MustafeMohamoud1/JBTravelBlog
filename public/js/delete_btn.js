@@ -5,15 +5,16 @@ for (let i=0; i< deletBtn.length; i++)
 {
     deletBtn[i].addEventListener("click",async function(event){
     
-        //console.log(event.target.firstElementChild)
+        let country=event.target.dataset.country
         let id=parseInt(event.target.dataset.id)
+
         console.log(id)
         const response = await fetch(`/api/recommendation/${id}`, {
           method: 'DELETE',
         });
      
       if (response.ok) {
- document.location.replace(`/api/recommendation/recomJson/Italy`);
+ document.location.replace(`/api/recommendation/recomJson/${country}`);
 
 
       } else {

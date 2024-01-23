@@ -61,7 +61,7 @@ router.get('/recomJson/:country', async (req, res) => {
 // need to fix this , code working reference to Italy is a little redundant 
 // 
     res.render('italy', { loggedIn: req.session.loggedIn,recomLoop});
-   
+    
   } catch (err) {
     res.status(500).json(err);
   }
@@ -134,8 +134,7 @@ router.delete('/:id', async (req, res) => {
       const postReccommendation = await Recommendation.destroy({
         where: {
           id: req.params.id,
-        
-        },
+                },
       });
   
       if (postReccommendation) {
