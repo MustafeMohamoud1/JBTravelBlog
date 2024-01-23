@@ -43,3 +43,7 @@ new svgMap({
       }
     }
 });
+
+addEventListener("mouseover", (event) => {});
+
+onmouseover = (event) => {console.log(this)};
