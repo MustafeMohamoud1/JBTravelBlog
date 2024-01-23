@@ -1,4 +1,4 @@
-    const postRecommendation = async (event) => {
+const postRecommendation = async (event) => {
     event.preventDefault();
 
 
@@ -15,7 +15,7 @@
         });
         
         if (response.ok) {
-            document.location.replace("/");
+            document.location.replace(`/api/recommendation/recomJson/${country}`);
         } else {
             alert("Error creating recommendations");
         }
