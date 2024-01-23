@@ -45,6 +45,8 @@ If running on a local device first ensure you have your credentials in the .env 
 4. `npm run seed` to populate the database
 5. `npm start` to run the site on localhost port 3001
 
+## Screenshots
+
 ## Technologies Used
 
 For details on the dependencies please click on these: [bcrypt](https://www.npmjs.com/package/bcrypt), [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize), [dotenv](https://www.npmjs.com/package/dotenv), [express](https://www.npmjs.com/package/express), [express-handlebars](https://www.npmjs.com/package/express-handlebars), [express-session](https://www.npmjs.com/package/express-session), [generate](https://www.npmjs.com/package/generate), [generate-dad-jokes](https://www.npmjs.com/package/generate-dad-jokes), [mysql2](https://www.npmjs.com/package/mysql2), [sequelize](https://www.npmjs.com/package/sequelize) and [svgMap](https://github.com/StephanWagner/svgMap).
