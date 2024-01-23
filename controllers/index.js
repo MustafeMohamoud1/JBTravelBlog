@@ -4,9 +4,9 @@ const homeRoutes = require('./homeRoutes.js');
 
 const loginRoutes = require('./loginRoutes.js');
 const signupRoutes = require('./signupRoutes.js');
-const apiRoutes = require('./api');
 const countryRoutes = require('./countryRoutes.js');
 const mapRoutes = require('./mapRoutes.js');
+const apiRoutes = require('./api');
 
 router.use('/', homeRoutes);
 router.use('/', loginRoutes);
