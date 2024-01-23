@@ -4,7 +4,7 @@ const { Recommendation } = require('../models');
 //Check if user logged in, and brings to profile page
 router.get('/', async (req, res) => {
     // get top 3 recommendations for each country
-    // pass each of the contry recommendations object bo below 
+    // pass each of the country recommendations object bo below 
 
     const franceData = await Recommendation.findAll({
         limit:8,
