@@ -1,24 +1,24 @@
 const router = require('express').Router();
-const { Recommendation } = require('../../models');
+const { Recommendation, User } = require('../../models');
 
 
 router.get('/', async (req, res) => {
-         res.render('recommendation', { loggedIn: req.session.loggedIn });
-    });
+  res.render('recommendation', { loggedIn: req.session.loggedIn });
+});
 
 
-    router.post('/', async (req, res) => {
-      console.log('create recommendation');
-      console.log(req.body);
-      try {
-        const newRecommendation = await Recommendation.create(req.body);
-        console.log(newRecommendation)
-        res.status(200).json(newRecommendation);
-      } catch (err) {
-        console.log(err);
-        res.status(400).json(err);
-      }
-    });
+router.post('/', async (req, res) => {
+  console.log('create recommendation');
+  console.log(req.body);
+  try {
+    const newRecommendation = await Recommendation.create(req.body);
+    console.log(newRecommendation)
+    res.status(200).json(newRecommendation);
+  } catch (err) {
+    console.log(err);
+    res.status(400).json(err);
+  }
+});
   // working section
 // router.get('/recomJson', async (req, res) => {
 //     try {
@@ -54,7 +54,17 @@ router.get('/recomJson/:country', async (req, res) => {
     const recommendations = await Recommendation.findAll({
             where: {
         country: req.params.country
-      }
+      },
+      attributes: ['id', 'city', 'place', 'country', 'description',
+      [
+        sequelize.fn('date_format', 
+        sequelize.col('date_created'), 
+        '%d-%m-%Y'), 
+        'date_created']],
+      include: [{
+          model: User,
+          attributes: ['name']
+      }]
     });
     const recomLoop = recommendations.map((recomIndiv) => recomIndiv.get({ plain: true }));
 
