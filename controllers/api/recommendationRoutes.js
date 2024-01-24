@@ -3,7 +3,7 @@ const { Recommendation, User } = require('../../models');
 
 
 router.get('/', async (req, res) => {
-  res.render('recommendation', { loggedIn: req.session.loggedIn });
+  res.render('recommendation', {user_id: req.session.user_id, user_name: req.session.user_name, loggedIn: req.session.loggedIn });
 });
 
 
@@ -70,7 +70,7 @@ router.get('/recomJson/:country', async (req, res) => {
 
 // need to fix this , code working reference to Italy is a little redundant 
 // 
-    res.render('italy', { loggedIn: req.session.loggedIn,recomLoop});
+    res.render('italy', {user_id: req.session.user_id, user_name: req.session.user_name, loggedIn: req.session.loggedIn,recomLoop});
     
   } catch (err) {
     res.status(500).json(err);
