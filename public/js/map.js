@@ -23,21 +23,21 @@ new svgMap({
         recommendationNum: 5,
         citiesNum: 4,
         topTraveller: 'Wally',
-        link: 'https://en.wikipedia.org/wiki/France',
+        link: 'api/recommendation/recomJson/1',
         linkTarget: '_blank',
       },
       IT: {
         recommendationNum: 5,
         citiesNum: 5,
         topTraveller: 'Carmen',
-        link: 'https://en.wikipedia.org/wiki/Italy',
+        link: 'api/recommendation/recomJson/2',
         linkTarget: '_blank'
       },
       ES: {
         recommendationNum: 5,
         citiesNum: 4,
         topTraveller: 'Phileas',
-        link: 'https://en.wikipedia.org/wiki/Spain',
+        link: 'api/recommendation/recomJson/3',
         linkTarget: '_blank'
       }
       }
