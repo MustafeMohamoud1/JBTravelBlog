@@ -22,30 +22,41 @@
 
 The JSON Bourne Travel site was conceived as a way for users to upload personal recommendations from their trips.  
 
-Before accessing the entire site, users must log in with their details, while new users are able to sign-up. The database stores information about the user (username and encrypted password) and their recommendations (country, city, place, description, date created and link to the user who submitted). This information is retrieved by HTTP methods for each country's page, and the user who submitted is able to update and delete their posts.  
+Before accessing the entire site, users must log in with their details, while new users are able to sign-up. The database stores information about the user (username and encrypted password) and their recommendations (country, city, place, description, date created and link to the user who submitted). This information is retrieved by HTTP methods for each country's page.  
 
-Having set up a solid structure following the MVC model we were able to link the front and back end, dynamically creating content through JavaScript and Handlebars.  
+Having set up a solid structure following the MVC model we were able to link the front and back end, dynamically creating content through JavaScript and Handlebars. Utilising several NPM packages enabled us to make code efficient as well as use some third-party projects, like the SVG map. 
 
 ## Future Plans
 
 We hope to improve the site by implementing additional features:
 - Expand the scope to include all countries!
-- Have more data attached to each recommendation through external API requests, allowing users to plan in more detail
+- World map currently "hard coded", so needs to be dynamically linked to database
+- Functioning edit button for recommendation posts
+- Conditional for delete/edit tied to logged-in user
+- Have more data attached to each recommendation through third-party API requests, allowing users to plan in more detail
 
 ## Usage
 
-<!-- Link to heroku -->
+https://jbtravelblog-app-ec6737a55ce5.herokuapp.com/
 
 https://github.com/MustafeMohamoud1/JBTravelBlog  
 
 If running on a local device first ensure you have your credentials in the .env file. Then in your terminal:
-1. Run `npm i` to install the dependencies needed
+1. `npm i` to install the dependencies needed
 2. `mysql -u root -p` then your mysql password and hit enter
 3. `source db/schema.sql;` to initialise the database, then exit with `\q`
 4. `npm run seed` to populate the database
 5. `npm start` to run the site on localhost port 3001
 
 ## Screenshots
+
+![homepage](./public/images/homepage.png)
+![log-in-page](./public/images/log-in.png)
+![sign-up-page](./public/images/sign-up.png)
+![logged-in-homepage](./public/images/logged-in-homepage.png)
+![post-recommendation-page](./public/images/recommendation.png)
+![new-country-page](./public/images/country-new-page.png)
+![world-map-page](./public/images/world-map.png)
 
 ## Technologies Used
 
